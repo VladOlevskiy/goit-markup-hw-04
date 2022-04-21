@@ -15,6 +15,8 @@
   --address-text-color: #ffffff;
   --second-title-color: #ffffff;
   --main-btn-color: #ffffff;
+  --main-icon-color: #afb1b8;
+  --second-icon-color: #ffffff;
 }
 
 p,
@@ -103,6 +105,8 @@ body {
   line-height: 1.14;
   letter-spacing: 0.02em;
   color: var(--header-contact-color);
+  display: flex;
+  align-items: center;
 }
 
 .addres-footer {
@@ -132,7 +136,7 @@ body {
   cursor: pointer;
 }
 
-/* ---------------------------------------------------------Футер--------------------------------------------------------------------------- */
+/* ---------------------------------------------------------ХЕДЕР--------------------------------------------------------------------------- */
 .header {
   padding-top: 24px;
   padding-bottom: 25px;
@@ -192,21 +196,39 @@ body {
   margin-right: 50px;
 }
 
-.navigation-link,
-.header-link-mail,
-.header-link-tel {
-  padding-bottom: 32px;
-  padding-top: 32px;
-}
 .header-navigation {
   display: flex;
 }
 
+.header-contact-icon {
+  fill: var(--header-contact-color);
+  margin-right: 10px;
+}
+.header-list-contact {
+  display: flex;
+  align-items: center;
+}
+
+.header-link-mail:hover .header-contact-icon,
+.header-link-mail:focus .header-contact-icon,
+.header-link-tel:hover .header-contact-icon,
+.header-link-tel:focus .header-contact-icon {
+  fill: var(--accent-color);
+}
 /* -------------------------------------------------Секція Hero Студія---------------------------------------------------------------------- */
 .section.hero {
-  background-color: var(--background-section);
+  background-color: #c4c4c4;
   padding-top: 200px;
   padding-bottom: 200px;
+  background-image: linear-gradient(
+      rgba(47, 48, 58, 0.4),
+      rgba(47, 48, 58, 0.4)
+    ),
+    url(../images/backgound-hero.jpg);
+  max-width: 1600px;
+  background-size: cover;
+  background-position: center;
+  margin: 0 auto;
 }
 
 .hero-title {
@@ -249,6 +271,9 @@ body {
 }
 /* -------------------------------------------------------Секція Наші переваги-------------------------------------------------------------- */
 
+.section.features {
+  padding-top: 18px;
+}
 .features-title {
   font-family: inherit;
   font-size: 14px;
@@ -273,7 +298,15 @@ body {
 .features-item:not(:last-child) {
   margin-right: 30px;
 }
-
+.features-thumb {
+  width: 270px;
+  height: 120px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--second-background-color);
+  margin-bottom: 30px;
+}
 /* -----------------------------------------------------Секція Чим ми займаємось-------------------------------------------------------------- */
 .work.section {
   padding-top: 0px;
@@ -333,12 +366,75 @@ body {
 }
 
 .team-list-text {
-  margin-bottom: 30px;
+  margin-bottom: 16px;
   font-family: inherit;
   font-size: 16px;
   line-height: 1.19;
   text-align: center;
   letter-spacing: 0.03em;
+}
+.team-soc-list {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 30px;
+}
+.team-soc-link {
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.team-soc-item:not(:last-child) {
+  margin-right: 10px;
+}
+.team-soc-icon {
+  fill: var(--main-icon-color);
+}
+
+.team-soc-link:hover,
+.team-soc-link:focus {
+  background-color: var(--accent-color);
+}
+
+.team-soc-link:hover .team-soc-icon,
+.team-soc-link:focus .team-soc-icon {
+  fill: var(--second-icon-color);
+}
+
+/* __________________________________________________________КЛІЄНТИ____________________________________________________ */
+
+.clients-title {
+  font-family: inherit;
+  font-size: 36px;
+  line-height: 1.17;
+  text-align: center;
+  color: var(--main-title-color);
+  margin-bottom: 50px;
+}
+.clients-link {
+  width: 170px;
+  height: 92px;
+  display: flex;
+  border: 1px solid #afb1b8;
+  border-radius: 4px;
+  justify-content: center;
+  align-items: center;
+}
+.clients-list {
+  display: flex;
+}
+.clients-item:not(:last-child) {
+  margin-right: 30px;
+}
+.clients-icon {
+  fill: var(--main-icon-color);
+  background-size: cover;
+}
+.clients-link:hover .clients-icon,
+.clients-link:focus .clients-icon {
+  fill: var(--accent-color);
 }
 
 /* ---------------------------------------------------------------Футер--------------------------------------------------------------------- */
@@ -347,6 +443,7 @@ body {
   background-color: var(--background-section);
   padding-top: 60px;
   padding-bottom: 60px;
+  display: flex;
 }
 
 .address-item:not(:last-child) {
@@ -381,6 +478,55 @@ body {
   margin-bottom: 20px;
 }
 
+.team-soc-list {
+  display: flex;
+  justify-content: center;
+}
+.text-footer {
+  font-family: inherit;
+  font-weight: 700;
+  line-height: 1.14;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  color: var(--address-text-color);
+  margin-bottom: 20px;
+}
+
+.footer-soc-link {
+  width: 44px;
+  height: 44px;
+  background-color: rgba(255, 255, 255, 0.1);
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.footer-soc-item:not(:last-child) {
+  margin-right: 10px;
+}
+.footer-soc-icon {
+  fill: var(--second-icon-color);
+}
+
+.footer-soc-link:hover,
+.footer-soc-link:focus {
+  background-color: var(--accent-color);
+}
+
+.footer-soc-list {
+  display: flex;
+}
+.footer-soc-div {
+  display: inline-block;
+  margin-left: 70px;
+}
+.footer-adress-div {
+  display: inline-block;
+}
+.footer-container {
+  display: flex;
+  align-items: baseline;
+}
 /* ------------------------------------------------------------------Секція Hero Портфорліо-------------------------------------------------- */
 .hero-btn-filter {
   font-family: inherit;
@@ -400,6 +546,9 @@ body {
 .hero-btn-filter:focus {
   color: var(--main-btn-color);
   background-color: var(--accent-color);
+  box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08),
+    0px 2px 2px rgba(0, 0, 0, 0.12);
+  border-radius: 4px;
 }
 
 .hero-list {
@@ -452,4 +601,10 @@ body {
   border-left: 1px solid #eeeeee;
   border-right: 1px solid #eeeeee;
   border-bottom: 1px solid #eeeeee;
+}
+
+.product-item:hover,
+.product-item:focus {
+  box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
+    1px 4px 6px rgba(0, 0, 0, 0.16);
 }
