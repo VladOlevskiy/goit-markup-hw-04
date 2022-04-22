@@ -216,7 +216,7 @@ body {
   fill: var(--accent-color);
 }
 /* -------------------------------------------------Секція Hero Студія---------------------------------------------------------------------- */
-.section.hero {
+.hero {
   background-color: #c4c4c4;
   padding-top: 200px;
   padding-bottom: 200px;
@@ -271,9 +271,6 @@ body {
 }
 /* -------------------------------------------------------Секція Наші переваги-------------------------------------------------------------- */
 
-.section.features {
-  padding-top: 18px;
-}
 .features-title {
   font-family: inherit;
   font-size: 14px;
@@ -603,8 +600,11 @@ body {
   border-bottom: 1px solid #eeeeee;
 }
 
-.product-item:hover,
-.product-item:focus {
+.product-link {
+  display: block;
+}
+.product-link:hover,
+.product-link:focus {
   box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
     1px 4px 6px rgba(0, 0, 0, 0.16);
 }
